@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import { connect } from "react-redux";
+import { login } from "../../Redux/auth/authActions";
 const LoginForm = ({ login }) => {
   var [email, setEmail] = useState("");
   var [password, setPassword] = useState("");
@@ -28,5 +29,7 @@ const LoginForm = ({ login }) => {
     </div>
   );
 };
-
-export default LoginForm;
+const actions = {
+  login,
+};
+export default connect(null, actions)(LoginForm);
