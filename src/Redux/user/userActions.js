@@ -8,7 +8,6 @@ export const getUserData = (userId, role) => async (dispatch) => {
         data: { user },
       },
     } = await axios.get(`/${role}/${userId}`);
-    console.log(user);
     dispatch({
       type: userConstants.GET_USER_DETAILS,
       payload: {
@@ -23,4 +22,21 @@ export const clearUser = () => async (dispatch) => {
   dispatch({
     type: userConstants.REMOVE_USER_DETAILS,
   });
+};
+
+export const addCourse = (courseDetails) => async () => {
+  try {
+    var { title, code, semester, teacherId, creditHours } = courseDetails;
+    console.log(courseDetails);
+    var course = await axios.post("/admin/addCourse", {
+      title,
+      code,
+      semester,
+      teacherId,
+      creditHours,
+    });
+    console.log(course);
+  } catch (error) {
+    console.log(error);
+  }
 };

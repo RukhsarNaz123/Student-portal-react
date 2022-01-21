@@ -2,16 +2,28 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { getUserData } from "../../Redux/user/userActions";
-
+import AdminDashboard from "../../Components/Dashboards/AdminDashboard";
+import StudentDashboard from "../../Components/Dashboards/StudentDashboard";
+import TeacherDashboard from "../../Components/Dashboards/TeacherDashboard";
 const Dashboard = ({ user, getUserData }) => {
-  // var [userId, setUserId] = useState("");
   useEffect(() => {
     function fetchUser() {
       getUserData(user?.userId, user?.role);
     }
     fetchUser();
   }, [user]);
-  return <div></div>;
+  {
+    if (user?.role === "admin") {
+      return <AdminDashboard />;
+    }
+    if (user?.role === "student") {
+      return <StudentDashboard />;
+    }
+    if (user?.role === "teacher") {
+      return <TeacherDashboard />;
+    }
+    return <div></div>;
+  }
 };
 const mapState = (state) => ({
   user: state?.auth,
