@@ -11,15 +11,13 @@ const StudentCourses = ({ courses }) => {
           <th>Credit Hours</th>
           {/* <th>Course Teachers</th> */}
         </tr>
-        {courses.length >= 0
-          ? courses.map(({ _id, title, code, creditHours }) => (
-              <tr key={_id}>
-                <td>{title}</td>
-                <td>{code}</td>
-                <td>{creditHours}</td>
-              </tr>
-            ))
-          : "not enrolled"}
+        {courses.map(({ _id, title, code, creditHours }) => (
+          <tr key={_id}>
+            <td>{title}</td>
+            <td>{code}</td>
+            <td>{creditHours}</td>
+          </tr>
+        ))}
       </table>
     </div>
   );

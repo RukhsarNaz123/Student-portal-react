@@ -8,7 +8,11 @@ const StudentDetails = ({ user }) => {
   return (
     <div>
       Enrolled Courses
-      <StudentCourses courses={user.courses} />
+      {user.courses.length <= 0 ? (
+        <h2>No course enrolled yet</h2>
+      ) : (
+        <StudentCourses courses={user.courses} />
+      )}
       <br />
       <hr />
       Student Profile
