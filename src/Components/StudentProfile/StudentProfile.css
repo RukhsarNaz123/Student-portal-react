@@ -1,0 +1,12 @@
+.sp {
+  height: 200px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-left,
+.profile-right {
+  flex: 1;
+}
