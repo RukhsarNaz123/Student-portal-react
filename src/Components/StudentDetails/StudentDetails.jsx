@@ -4,7 +4,6 @@ import StudentCourses from "../StudentCourses/StudentCourses";
 import StudentProfile from "../StudentProfile/StudentProfile";
 
 const StudentDetails = ({ user }) => {
-  console.log(user);
   return (
     <div>
       Enrolled Courses

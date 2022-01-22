@@ -5,7 +5,7 @@ import SignupForm from "../../Components/SignupForm/SignupForm";
 const Auth = () => {
   return (
     <div>
-      <h1>Auth</h1>
+      <h1>Authentication</h1>
       <h3>Signup Form</h3>
       <SignupForm />
       <h3>Login Form</h3>

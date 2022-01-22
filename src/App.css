@@ -14,6 +14,21 @@
   }
 }
 
+input {
+  width: 30%;
+  padding: 5px;
+  margin: 4px;
+}
+
+select {
+  width: 100px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 20px;
+  margin: 5px;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

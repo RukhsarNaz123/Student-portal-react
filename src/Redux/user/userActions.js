@@ -3,11 +3,28 @@ import { userConstants } from "./userConstants";
 
 export const getUserData = (userId, role) => async (dispatch) => {
   try {
-    var {
-      data: {
-        data: { user },
-      },
-    } = await axios.get(`/${role}/${userId}`);
+    if (role === "teacher") {
+      var {
+        data: {
+          data: { user },
+        },
+      } = await axios.get(`/teacher/${userId}`);
+    }
+    if (role === "student") {
+      var {
+        data: {
+          data: { user },
+        },
+      } = await axios.get(`/student/${userId}`);
+    }
+    if (role === "admin") {
+      var {
+        data: {
+          data: { user },
+        },
+      } = await axios.get(`/admin/${userId}`);
+    }
+
     dispatch({
       type: userConstants.GET_USER_DETAILS,
       payload: {

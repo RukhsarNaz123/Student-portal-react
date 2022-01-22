@@ -22,7 +22,7 @@ const Dashboard = ({ user, getUserData }) => {
     if (user?.role === "teacher") {
       return <TeacherDashboard />;
     }
-    return <div></div>;
+    return <div>return back to login page</div>;
   }
 };
 const mapState = (state) => ({
