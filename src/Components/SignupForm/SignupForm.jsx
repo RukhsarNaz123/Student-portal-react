@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
 import { signup } from "./../../Redux/auth/authActions";
-
 const SignupForm = ({ signup }) => {
   var [firstName, setfirstName] = useState("");
   var [lastName, setLastName] = useState("");
@@ -24,7 +23,7 @@ const SignupForm = ({ signup }) => {
     });
   };
   return (
-    <div>
+    <div className="signup-form">
       <form onSubmit={hanldeSubmit}>
         <input
           value={firstName}

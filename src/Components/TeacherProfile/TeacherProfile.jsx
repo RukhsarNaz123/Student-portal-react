@@ -1,16 +1,16 @@
 import React from "react";
-import "./StudentProfile.css";
 const TeacherProfile = ({ profile }) => {
-  const { fullName, rollNo, semester, email } = profile;
+  const { fullName, username, role, email } = profile;
+
   return (
     <div className=" sp flex">
       <div className="profile-left flex">
         <div className="img"></div>
         <h1>{fullName}</h1>
-        <p>Roll number: {rollNo ? rollNo : "unknown"}</p>
+        <p>Roll: {role ? role : "unknown"}</p>
       </div>
       <div className="profile-right">
-        <h3>Semester: {semester ? semester : "unknown"}</h3>
+        <p>username: {username ? username : "unknown"}</p>
         <p>email: {email ? email : "unknown"}</p>
       </div>
     </div>

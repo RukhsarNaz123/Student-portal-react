@@ -41,6 +41,7 @@ const StudentForm = () => {
           onChange={(e) => setSection(e.target.value)}
           placeholder="Student section"
         />
+        <br />
         <label>semester:</label>
         <input
           value={semester}
@@ -50,6 +51,7 @@ const StudentForm = () => {
           max={8}
           placeholder="semester"
         />
+        <label> Student Name: </label>
         <select
           value={studentId}
           onChange={(e) => setStudentId(e.target.value)}

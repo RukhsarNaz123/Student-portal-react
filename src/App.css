@@ -13,7 +13,16 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.homepage {
+  height: 80vh;
+  flex-flow: column;
+}
+.homepage-img {
+  width: 200px;
+  height: 200px;
+  background-image: url(../public//assets/studentPortal.jpg);
+  background-size: cover;
+}
 input {
   width: 30%;
   padding: 5px;
@@ -28,6 +37,9 @@ select {
 button {
   padding: 5px 20px;
   margin: 5px;
+}
+label {
+  padding: 0px 5px;
 }
 .App-header {
   background-color: #282c34;

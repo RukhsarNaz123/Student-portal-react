@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { authLogout } from "../../Redux/auth/authActions";
 import { clearUser } from "../../Redux/user/userActions";
-
+import "./Navbar.css";
 const Navbar = ({ user, authLogout, clearUser }) => {
   return (
     <div className="navbar">

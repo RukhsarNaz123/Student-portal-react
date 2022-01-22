@@ -6,8 +6,9 @@ import Dashboard from "./Pages/Dashboards/Dashboard";
 import Navbar from "./Components/Navbar/Navbar";
 
 const HomePage = () => (
-  <div>
+  <div className="homepage flex">
     <h1>Welcome to Student Portal</h1>
+    <div className="homepage-img"></div>
     <p>press login button on navbar above</p>
   </div>
 );

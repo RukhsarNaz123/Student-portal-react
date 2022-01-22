@@ -1,48 +1,21 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { connect } from "react-redux";
+import EnrolledStudents from "../EnrolledStudents/EnrolledStudents";
+import TeacherProfile from "../TeacherProfile/TeacherProfile";
 
-const EnrolledStudents = ({ courses }) => {
-  const [students, setStudents] = useState([]);
-  const getData = async (semester) => {
-    const {
-      data: {
-        data: { students },
-      },
-    } = await axios.post(`/student/EnrolledStudents`, {
-      semester: semester,
-    });
-    setStudents(students);
-  };
-  var {
-    0: { semester, ...restData },
-  } = courses;
-
-  getData(semester);
-
-  return (
-    <div>
-      <table>
-        <tr>
-          <th>Student Name</th>
-          <th>Roll Number</th>
-        </tr>
-        {students.map(({ fullName, rollNo }) => (
-          <tr>
-            <td>{fullName}</td>
-            <td>{rollNo}</td>
-          </tr>
-        ))}
-      </table>
-    </div>
-  );
-};
 const TeacherDetails = ({ user }) => {
   console.log(user);
   return (
     <div>
       Enrolled Students
-      <EnrolledStudents courses={user.teachingCourses} />
+      {user.teachingCourses.length > 0 ? (
+        <EnrolledStudents courses={user.teachingCourses} />
+      ) : (
+        "course is not alloted to you yet"
+      )}
+      <hr />
+      <TeacherProfile profile={user} />
     </div>
   );
 };
