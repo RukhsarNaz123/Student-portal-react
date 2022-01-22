@@ -1,5 +1,4 @@
 import axios from "axios";
-import { userConstants } from "../user/userConstants";
 import { authConstants } from "./authConstants";
 
 export const signup =

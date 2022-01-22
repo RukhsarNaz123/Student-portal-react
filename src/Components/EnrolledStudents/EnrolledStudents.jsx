@@ -15,7 +15,7 @@ export const EnrolledStudents = ({ courses }) => {
     setStudents(students);
   };
   var {
-    0: { semester, ...restData },
+    0: { semester },
   } = courses;
 
   getData(semester);

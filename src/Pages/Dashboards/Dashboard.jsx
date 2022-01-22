@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getUserData } from "../../Redux/user/userActions";
 import AdminDashboard from "../../Components/Dashboards/AdminDashboard";
